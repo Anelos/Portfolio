@@ -8,8 +8,8 @@
     <meta name="description" content="un blog, un portfolio et tout ce qu'il faut pour me contacter">
     <meta name="autor" content="Ludovic Soret">
     <link href="https://fonts.googleapis.com/css?family=Macondo" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
     <link rel="stylesheet" href="css/style.css">
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
@@ -18,50 +18,75 @@
 </head>
 
 <body>
-    <nav class="navbar">
-        <div class="container">
-            <ul class="nav">
-                <li><a href="#accueil">ACCUEIL</a></li>
-                <li><a href="#">BLOG</a></li>
-                <li><a href="#">À PROPOS DE MOI</a></li>
-                <li><a href="#">PORTFOLIO</a></li>
-                <li><a href="#">CONTACT</a></li>
-            </ul>
-        </div>
-    </nav>
-    <section class="accueil">
-        <div>
-            <h1>WELCOME!</h1>
-            <p>Je dois mettre quelque chose ici mais je ne sais pas encore quoi!</p>
-        </div>
-        <div class='animation'>
-        </div>
-    </section>
-    <section class="blog">
-        <div class="blog_content">
-            <div class="blog_text">
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">MENU</i></a>
+                <ul class="center hide-on-med-and-down">
+                    <li><a href="#accueil">ACCUEIL</a></li>
+                    <li><a href="#portfolio">MON TRAVAIL</a></li>
+                    <li><a href="#presentation">PRÉSENTATION</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+                <ul class="side-nav" id="mobile-demo">
+                    <li><a href="#accueil">ACCUEIL</a></li>
+                    <li><a href="#portfolio">MON TRAVAIL</a></li>
+                    <li><a href="#presentation">PRÉSENTATION</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
             </div>
-            <div class="blog_nav">
+        </nav>
+    </div>
+    <section id="accueil">
+        <div class="row">
+            <div class="col s12 m8 l6 xl6 offset-m2 offset-l3 offset-xl3">
+                <h1>WELCOME!</h1>
+                <h4>Ceci est mon portfolio ... étonnant non?!</h4>
+            </div>
+        </div>
+        <div class='animation'>
+        </div>
+    </section>
 
+    <section id="portfolio">
+
+    </section>
+    <section id="presentation">
+        <div class="row">
+            <div class="col s6 m4 l3 xl3 offset-m1 offset-l2 offset-xl2">
+                <img class="photo" src="images\image-de-profil-2.jpg" alt="images\image-de-profil-2">
+                <div class="row">
+                    <div class="col m8 l6 xl6 offset-m2 offset-l3 offset-xl3">
+                        <p><strong>NOM :</strong> Soret</p>
+                        <p><strong>PRÉNOM :</strong> Ludovic</p>
+                        <p><strong>ÂGE :</strong> <span id="age">37ans</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s6 m6 l5 xl5 presText">
+              <p>Un mot qui pourrait me définir: touche-à-tout ...Oui bon je sais ça en fait trois (encore qu'avec les traits d'unions ça passe ...normalement), mais je pense qu'il me correspond bien.</p>
+              <p>Je suis un "jeune" développeur back-end qui s'intéresse un peu à tout, tour à tour à la biologie puis à l'électronique et enfin au développement web. Bref, les sciences et la technologie c'est mon dada (oh my god! cette expression de vieux)</p>
+              <p>Arrêtons de tergiverser et revenons à nos moutons, je suis actuellement encore en formation et mes connaissances dans les technologies du web sont encore jeunes et fraiches. J'explore actuellement le php et bientôt le framework simfony, j'ai jeté (attention, ça peut faire mal) un regard curieux sur python, Java JEE, ASP.NET et divers framework javascript et je compte bien m'y aventurer un peu plus loin dans tout celà.
             </div>
 
         </div>
-        <div class='animation'>
-        </div>
-    </section>
-    <section class="portfolio">
 
-    </section>
-    <section class="me">
         <div class='animation'>
         </div>
     </section>
-    <section class="contact">
+
+    <section id="contact">
         <div class='animation'>
         </div>
     </section>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(".button-collapse").sideNav();
+        });
+    </script>
 </body>
 
 </html>
