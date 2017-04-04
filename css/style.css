@@ -31,7 +31,7 @@ section {
     padding-top: 80px;
 }
 
-img.photo{
+.photo{
   text-align: center;
   width: 100%;
 }
@@ -39,4 +39,7 @@ img.photo{
   border-left: 1px solid white;
   height: 50vh;
   text-align: justify;
+}
+#contact .row .col:nth-child(2){
+  border-left: 1px solid white;
 }
