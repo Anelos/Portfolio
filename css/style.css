@@ -22,8 +22,9 @@ nav {
 }
 
 nav ul {
-    transform: translateX(40%);
-    webkit-transform: translateX(-40%);
+    text-align: center;
+    transform: translateX(38%);
+    webkit-transform: translateX(-38%);
 }
 
 section {
@@ -31,15 +32,23 @@ section {
     padding-top: 80px;
 }
 
-.photo{
-  text-align: center;
-  width: 100%;
+.photo {
+    text-align: center;
+    width: 100%;
 }
-.presText{
-  border-left: 1px solid white;
-  height: 50vh;
-  text-align: justify;
+
+.presText {
+    border-left: 1px solid white;
+    height: 50vh;
+    text-align: justify;
 }
-#contact .row .col:nth-child(2){
-  border-left: 1px solid white;
+
+#portfolio img {
+    display: block;
+    margin: auto;
+    height: 100%;
+}
+
+#contact .row .col:nth-child(2) {
+    border-left: 1px solid white;
 }
