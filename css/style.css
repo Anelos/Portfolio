@@ -1,6 +1,4 @@
-/*div {
-    border: 1px solid white;
-}*/
+/* General */
 
 body {
     margin: 0;
@@ -10,11 +8,20 @@ body {
     position: relative;
 }
 
+section {
+    height: 90vh;
+    padding-top: 80px;
+    border: 1px solid white;
+}
+
 h1, h4 {
     font-family: 'Macondo';
     font-weight: normal;
     text-align: center;
 }
+
+
+/* Barre de navigation */
 
 nav {
     background-color: black;
@@ -22,15 +29,18 @@ nav {
 }
 
 nav ul {
+    position: absolute;
+    left: 50%;
     text-align: center;
-    transform: translateX(38%);
-    webkit-transform: translateX(-38%);
+    transform: translateX(-50%);
 }
 
-section {
-    height: 100vh;
-    padding-top: 80px;
+nav ul li a {
+    font-size: 25px;
 }
+
+
+/* Section présentation */
 
 .photo {
     text-align: center;
@@ -43,12 +53,77 @@ section {
     text-align: justify;
 }
 
-#portfolio img {
+
+/* Section portfolio */
+
+.portfolio img {
     display: block;
     margin: auto;
     height: 100%;
 }
 
-#contact .row .col:nth-child(2) {
+
+/* Section Contact*/
+
+.contact .row .col:nth-child(2) {
     border-left: 1px solid white;
+}
+
+
+/*Bateau*/
+
+.animation {
+    position: relative;
+    height: 250px;
+    width: 100vw;
+    /*border: 1px solid white;*/
+}
+
+.boat, .boat img {
+    /*border: 1px solid white;*/
+    height: 200px;
+}
+
+.wave {
+    position: absolute;
+    width: 200px;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    animation: boatPosition 8s infinite linear;
+}
+
+.rotate {
+    /*border: 1px solid white;*/
+    animation: boatRotate 8s infinite linear;
+}
+
+@keyframes boatPosition {
+    0% {
+        transform: translate3d(-50%, 5px, 0px);
+    }
+    50% {
+        transform: translate3d(-50%, -5px, 0px);
+    }
+    100% {
+        transform: translate3d(-50%, 5px, 0px);
+    }
+}
+
+@keyframes boatRotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-3deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(3deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
 }
