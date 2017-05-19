@@ -2,135 +2,121 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="un blog, un portfolio et tout ce qu'il faut pour me contacter">
-    <meta name="autor" content="Ludovic Soret">
-    <link href="https://fonts.googleapis.com/css?family=Macondo" rel="stylesheet">
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <script src='https://www.google.com/recaptcha/api.js'></script>
-    <!--[if lt IE 9]>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="un portfolio, une présentation de ma personne et tout ce qu'il faut pour me contacter">
+  <meta name="autor" content="Ludovic Soret">
+  <title>Portfolio</title>
+  <link href="https://fonts.googleapis.com/css?family=Macondo" rel="stylesheet">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
+  <link rel="stylesheet" href="css/main.min.css">
+
+  <script src="https://www.google.com/recaptcha/api.js"></script>
+  <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
 
 <body>
-    <div class="navbar-fixed">
-        <nav>
-            <div class="nav-wrapper">
-                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">MENU</i></a>
-                <ul class="center hide-on-med-and-down">
-                    <li><a href="#accueil">ACCUEIL</a></li>
-                    <li><a href="#portfolio">MON TRAVAIL</a></li>
-                    <li><a href="#presentation">PRÉSENTATION</a></li>
-                    <li><a href="#contact">CONTACT</a></li>
-                </ul>
-                <ul class="side-nav" id="mobile-demo">
-                    <li><a href="#accueil">ACCUEIL</a></li>
-                    <li><a href="#portfolio">MON TRAVAIL</a></li>
-                    <li><a href="#presentation">PRÉSENTATION</a></li>
-                    <li><a href="#contact">CONTACT</a></li>
-                </ul>
-            </div>
-        </nav>
+  <div class="backgroundImg">
+  </div>
+  <div class="menuitems">
+    <div class="pos-0">
+        ACCUEIL
     </div>
-    <section class="accueil">
-        <div class="row">
-            <div class="col s12 m8 l6 xl6 offset-m2 offset-l3 offset-xl3">
-                <h1>WELCOME!</h1>
-                <h4>Ceci est mon portfolio ... étonnant non?!</h4>
+    <div class="pos-1">
+        PROJETS
+    </div>
+    <div class="pos-2">
+        COMPÉTENCE
+    </div>
+    <div class="pos-3">
+        CONTACT
+    </div>
+  </div>
+
+  <section class="accueil">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 s6 m4 l3 xl3 offset-m1 offset-l2 offset-xl2">
+          <div class="">
+            <img class="photo" src="images/image-de-profil-2.jpg" alt="images/image-de-profil-2" />
+          </div>
+          <div>
+            <p><strong>NOM :</strong> Soret</p>
+            <p><strong>PRÉNOM :</strong> Ludovic</p>
+            <p><strong>ÂGE :</strong> <span id="age">37ans</span></p>
+          </div>
+        </div>
+        <div class="col s12 s6 m6 l5 xl5 presText">
+          <p>Un mot qui pourrait me définir: touche-à-tout ...Ouais bon, je sais ça en fait trois (encore qu'avec les traits d'unions ça passe ...normalement), mais je pense qu'il me correspond bien.</p>
+          <p>Je suis un "jeune" développeur de 38ans back-end qui s'intéresse un peu à tout, tour à tour à la biologie puis à l'électronique et enfin au développement web. Bref, les sciences et la technologie c'est mon dada (oh my god! cette expression de
+            vieux)
+          </p>
+          <p>Arrêtons de tergiverser et revenons à nos moutons, je suis actuellement encore en formation et mes connaissances dans les technologies du web sont encore jeunes et fraiches. J'explore actuellement le php et le framework simfony, j'ai aussi jeté
+            (attention, ça peut faire mal) un regard curieux sur python, Java, C, C++, C# et autres et je compte bien m'y aventurer un peu plus loin dans tout cela.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="portfolio">
+    <div class="row">
+      <div class="col s12 m8 l6 xl6 offset-m2 offset-l3 offset-xl3">
+        <div class="image">
+          <a href="http://osccop.free.fr"><img src="images/osccopimage.png" alt="images/osccopimage"></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="presentation">
+    <div class="container">
+    </div>
+  </section>
+
+  <section class="contact">
+    <div class="container">
+      <div class="row">
+        <form class="col s12">
+          <div class="row">
+            <div class="col s12 m6 l3 xl3 offset-l2 offset-l2">
+              <div class="input-field">
+                <input id="first_name" type="text" class="validate">
+                <label for="first_name">Nom</label>
+              </div>
+              <div class="input-field">
+                <input id="email" data-error="wrong" type="email" class="validate">
+                <label for="email">Email</label>
+              </div>
             </div>
-        </div>
-        <div class='animation'>
-            <div class='boat'>
-                <div class="wave">
-                    <div class="rotate">
-                        <img src="images/drakkar.svg" alt="drakkar" />
-                    </div>
-                </div>
+            <div class="col s12 m6 l3 xl3 offset-l1 offset-l1">
+              <div class="input-field">
+                <input id="subject" type="text" class="validate">
+                <label for="subject">Sujet</label>
+              </div>
+              <div class="input-field">
+                <textarea id="textarea1" class="materialize-textarea"></textarea>
+                <label for="textarea1">Message</label>
+              </div>
             </div>
-        </div>
-    </section>
+          </div>
+          <!-- <div class="g-recaptcha" data-sitekey="6LcJqRQUAAAAAEsunV5NzU_gxbxdRqBA2CMJZKyt"></div> -->
+          <div class="center-align">
+            <button class="btn waves-effect waves-light" type="submit" name="action">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
 
-    <section class="portfolio">
-        <div class="row">
-            <div class="col s12 m8 l6 xl6 offset-m2 offset-l3 offset-xl3">
-                <div class="image">
-                    <a href="http://osccop.free.fr"><img src="images\osccopimage.png" alt="images\osccopimage"></a>
-                </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+  <script src="js/main.js"></script>
 
-            </div>
-        </div>
-
-    </section>
-    <section class="presentation">
-        <div class="row">
-            <div class="col s6 m4 l3 xl3 offset-m1 offset-l2 offset-xl2">
-                <img class="photo" src="images\image-de-profil-2.jpg" alt="images\image-de-profil-2" />
-                <div class="row">
-                    <div class="col m8 l6 xl6 offset-m2 offset-l3 offset-xl3">
-                        <p><strong>NOM :</strong> Soret</p>
-                        <p><strong>PRÉNOM :</strong> Ludovic</p>
-                        <p><strong>ÂGE :</strong> <span id="age">37ans</span></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col s6 m6 l5 xl5 presText">
-                <p>Un mot qui pourrait me définir: touche-à-tout ...Oui bon je sais ça en fait trois (encore qu'avec les traits d'unions ça passe ...normalement), mais je pense qu'il me correspond bien.</p>
-                <p>Je suis un "jeune" développeur back-end qui s'intéresse un peu à tout, tour à tour à la biologie puis à l'électronique et enfin au développement web. Bref, les sciences et la technologie c'est mon dada (oh my god! cette expression de vieux)</p>
-                <p>Arrêtons de tergiverser et revenons à nos moutons, je suis actuellement encore en formation et mes connaissances dans les technologies du web sont encore jeunes et fraiches. J'explore actuellement le php et le framework simfony, j'ai aussi
-                    jeté (attention, ça peut faire mal) un regard curieux sur python, Java, C, C++, C# et autres et je compte bien m'y aventurer un peu plus loin dans tout cela.
-            </div>
-        </div>
-
-        <div class='animation'>
-        </div>
-    </section>
-
-    <section class="contact">
-        <div class="row">
-            <form class="col s12">
-                <div class="row">
-                    <div class="col s12 m6 l3 xl3 offset-l2 offset-l2">
-                        <div class="input-field">
-                            <input id="first_name" type="text" class="validate">
-                            <label for="first_name">Nom</label>
-                        </div>
-                        <div class="input-field">
-                            <input id="email" data-error="wrong" type="email" class="validate">
-                            <label for="email">Email</label>
-                        </div>
-                    </div>
-                    <div class="col s12 m6 l3 xl3 offset-l1 offset-l1">
-                        <div class="input-field">
-                            <input id="subject" type="text" class="validate">
-                            <label for="subject">Sujet</label>
-                        </div>
-                        <div class="input-field">
-                            <textarea id="textarea1" class="materialize-textarea"></textarea>
-                            <label for="textarea1">Message</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="g-recaptcha" data-sitekey="6LcJqRQUAAAAAEsunV5NzU_gxbxdRqBA2CMJZKyt"></div>
-                <button class="btn waves-effect waves-light" type="submit" name="action">Submit</button>
-            </form>
-        </div>
-        <div class='animation'>
-        </div>
-    </section>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $(".button-collapse").sideNav();
-        });
-    </script>
 </body>
 
 </html>

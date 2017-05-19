@@ -1,129 +1,106 @@
 /* General */
 
 body {
-    margin: 0;
-    padding: 0;
-    background-color: black;
-    color: white;
-    position: relative;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  color: cyan;
+  background-color: #313022;
+  background-image: url("../images/backgroung_pcb.gif"), -webkit-gradient(linear, left top, left bottom, from(linear), color-stop(45deg), color-stop(rgba(100, 100, 100, .8)), color-stop(15%, rgba(100, 100, 100, 1)), to(rgba(100, 100, 100, 1)));
+  background-image: url("../images/backgroung_pcb.gif"), linear-gradient(linear, 45deg, rgba(100, 100, 100, .8), rgba(100, 100, 100, 1) 15%, rgba(100, 100, 100, 1));
 }
 
 section {
-    height: 90vh;
-    padding-top: 80px;
-    border: 1px solid white;
+  position: absolute;
+  height: 90vh;
+  -webkit-box-shadow: -5px 5px 5px #222;
+  box-shadow: -5px 5px 5px #222;
+  color: inherit;
 }
 
 h1, h4 {
-    font-family: 'Macondo';
-    font-weight: normal;
-    text-align: center;
+  font-family: 'Macondo';
+  font-weight: normal;
+  text-align: center;
+}
+
+.container {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 
-/* Barre de navigation */
+/* Section accueil */
 
-nav {
-    background-color: black;
-    font-family: 'Macondo';
-}
 
-nav ul {
-    position: absolute;
-    left: 50%;
-    text-align: center;
-    transform: translateX(-50%);
-}
-
-nav ul li a {
-    font-size: 25px;
-}
+/* Section portfolio */
 
 
 /* Section présentation */
 
 .photo {
-    text-align: center;
-    width: 100%;
+  width: 100%;
+  text-align: center;
 }
 
 .presText {
-    border-left: 1px solid white;
-    height: 50vh;
-    text-align: justify;
+  height: 50vh;
+  text-align: justify;
+  border-left: 1px solid white;
 }
 
 
-/* Section portfolio */
-
-.portfolio img {
-    display: block;
-    margin: auto;
-    height: 100%;
-}
-
-
-/* Section Contact*/
+/* Section Contact */
 
 .contact .row .col:nth-child(2) {
-    border-left: 1px solid white;
+  border-left: 1px solid white;
 }
 
 
-/*Bateau*/
+/* position des sections */
 
-.animation {
-    position: relative;
-    height: 250px;
-    width: 100vw;
-    /*border: 1px solid white;*/
+.pos0 {
+  z-index: 50;
+  background-color: rgba(16, 32, 16, 0.99);
 }
 
-.boat, .boat img {
-    /*border: 1px solid white;*/
-    height: 200px;
+.pos0 .menuitem {
+  color: #d3d2c6;
 }
 
-.wave {
-    position: absolute;
-    width: 200px;
-    left: 50%;
-    bottom: 20px;
-    transform: translateX(-50%);
-    animation: boatPosition 8s infinite linear;
+.pos1 {
+  z-index: 40;
+  opacity: 0;
 }
 
-.rotate {
-    /*border: 1px solid white;*/
-    animation: boatRotate 8s infinite linear;
+.pos1 .menuitem {
+  color: #99988e;
 }
 
-@keyframes boatPosition {
-    0% {
-        transform: translate3d(-50%, 5px, 0px);
-    }
-    50% {
-        transform: translate3d(-50%, -5px, 0px);
-    }
-    100% {
-        transform: translate3d(-50%, 5px, 0px);
-    }
+.pos2 {
+  z-index: 30;
+  opacity: 0;
 }
 
-@keyframes boatRotate {
-    0% {
-        transform: rotate(0deg);
-    }
-    25% {
-        transform: rotate(-3deg);
-    }
-    50% {
-        transform: rotate(0deg);
-    }
-    75% {
-        transform: rotate(3deg);
-    }
-    100% {
-        transform: rotate(0deg);
-    }
+.pos2 .menuitem {
+  color: #7b7968;
+}
+
+.pos3 {
+  z-index: 20;
+  opacity: 0;
+}
+
+.pos3 .menuitem {
+  color: #6c6a56;
+}
+
+.menuitem {
+  font-size: 16px;
+  font-weight: bold;
+  left: 10px;
+  position: absolute;
+  text-align: left;
 }

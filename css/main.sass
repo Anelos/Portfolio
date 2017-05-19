@@ -1,0 +1,69 @@
+body
+  margin: 0
+  padding: 0
+  color: cyan
+
+  .backgroundImg
+    position: absolute
+    height: 100%
+    width: 100%
+    background-image: url('../images/backgroung_pcb.gif')
+    background-color: rgba(16, 16, 16, .5)
+    -moz-transform: scaleX(-1)
+    -o-transform: scaleX(-1)
+    -webkit-transform: scaleX(-1)
+    transform: scaleX(-1)
+    filter: FlipH
+    -ms-filter: "FlipH"
+    z-index: -10
+
+section
+  position: absolute
+  color: inherit
+  z-index: 30
+
+  h1,
+  h4
+    font-family: 'Macondo'
+    font-weight: normal
+    text-align: center
+
+  .container
+    position: relative
+    top: 50%
+    transform: translateY(-50%)
+    -webkit-transform: translateY(-50%)
+
+  .photo
+    width: 100%
+    text-align: center
+
+  .presext
+    height: 50%
+    text-align: justify
+    border-left: 1px solid white
+
+.menuitems
+  position: absolute
+  font-size: 16px
+  font-weight: bold
+  text-align: left
+
+  div
+    position: absolute
+    width: 500px
+    height: 300px
+    background-image: linear-gradient(135deg, rgba(16,16,16,1),rgba(16,16,16,0))
+    cursor: pointer
+    box-shadow: -2px rgb(25, 25, 25)
+
+  @for $i from 0 through 3
+    .pos-#{3-$i}
+       top: ($i * 30px + 30px)
+       left: ($i * 10px + 50px)
+       z-index: ($i * 10)
+
+.contact
+  .row
+    .col:nth-child(2)
+      border-left: 1px solid white
