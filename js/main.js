@@ -1,4 +1,7 @@
 $('document').ready(function () {
+  $(document).ready(function(){
+    $('.carousel').carousel()
+  })
   $(".button-collapse").sideNav()
   $('.portfolio, .contact, presentation').hide()
   var sizing = () => {
@@ -19,7 +22,10 @@ $('document').ready(function () {
 
   $('.menu li').click(function () {
     let menuIndex = $(this).index()
-    console.log(menuIndex)
+    $(document).ready(function(){
+      $('.carousel').carousel()
+    })
+
     $('section').hide().each(function (i) {
       if (i === menuIndex) {
         $(this).fadeIn('100')
